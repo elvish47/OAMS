@@ -17,7 +17,7 @@ if (!isset($_SESSION['admin_id'])) {
     $_SESSION['login_time'] = date('Y-m-d H:i:s');
 }
 
-// Get admin info
+// Get admin info elvish shrestha
 $admin_name = $_SESSION['admin_name'] ?? 'Administrator';
 $admin_email = $_SESSION['admin_email'] ?? 'admin@assignflow.com';
 $login_time = $_SESSION['login_time'] ?? date('Y-m-d H:i:s');
