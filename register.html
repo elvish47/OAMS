@@ -3,27 +3,209 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Login - OAMS</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f0f4f8 0%, #d9e2ec 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .login-container {
+            background: white;
+            max-width: 420px;
+            width: 100%;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .login-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .login-header .icon {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+
+        .login-header h2 {
+            color: #1a2a3a;
+            font-size: 28px;
+        }
+
+        .login-header h2 span {
+            color: #64b5f6;
+        }
+
+        .login-header p {
+            color: #5a6e7e;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            color: #1a2a3a;
+            margin-bottom: 6px;
+            font-size: 14px;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: #64b5f6;
+            box-shadow: 0 0 0 3px rgba(100, 181, 246, 0.1);
+        }
+
+        .form-options {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+
+        .form-options label {
+            color: #5a6e7e;
+            cursor: pointer;
+        }
+
+        .form-options input[type="checkbox"] {
+            accent-color: #64b5f6;
+            margin-right: 5px;
+        }
+
+        .form-options a {
+            color: #64b5f6;
+            text-decoration: none;
+        }
+
+        .form-options a:hover {
+            text-decoration: underline;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn-login {
+            background: #64b5f6;
+            color: white;
+        }
+
+        .btn-login:hover {
+            background: #42a5f5;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(100, 181, 246, 0.3);
+        }
+
+        .register-link {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #5a6e7e;
+        }
+
+        .register-link a {
+            color: #64b5f6;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .register-link a:hover {
+            text-decoration: underline;
+        }
+
+        .back-link {
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .back-link a {
+            color: #7a8b9b;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .back-link a:hover {
+            color: #64b5f6;
+        }
+
+        @media (max-width: 500px) {
+            .login-container {
+                padding: 25px 20px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>Register</h1>
+    <div class="login-container">
+        <div class="login-header">
+            <div class="icon">📋</div>
+            <h2>OAMS<span>.</span></h2>
+            <p>Login to manage your assignments</p>
+        </div>
 
-<form method="POST">
+        <form action="#" method="POST">
+            <div class="form-group">
+                <label>Email Address</label>
+                <input type="email" placeholder="Enter your email" required>
+            </div>
 
-    Full Name:
-    <input type="text" name="name"><br><br>
+            <div class="form-group">
+                <label>Password</label>
+                <input type="password" placeholder="Enter your password" required>
+            </div>
 
-    Email:
-    <input type="email" name="email"><br><br>
+            <div class="form-options">
+                <label>
+                    <input type="checkbox"> Remember me
+                </label>
+                <a href="#">Forgot password?</a>
+            </div>
 
-    Password:
-    <input type="password" name="password"><br><br>
+            <button type="submit" class="btn btn-login">Login</button>
+        </form>
 
-    UserName:
-    <input type="text" name="username"><br><br>
+        <div class="register-link">
+            Don't have an account? <a href="register.html">Register here</a>
+        </div>
 
-    <input type="submit" name="register" value="Register">
-
-</form>
+        <div class="back-link">
+            <a href="homepage.html">← Back to Home</a>
+        </div>
+    </div>
 </body>
 </html>
